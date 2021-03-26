@@ -1,0 +1,35 @@
+plugins {
+    id 'java-library'
+    id 'maven-publish'
+}
+
+group 'com.togglee'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation(platform('org.junit:junit-bom:5.7.1'))
+    testImplementation('org.junit.jupiter:junit-jupiter')
+}
+
+test {
+    useJUnitPlatform()
+}
+
+//publishing {
+//    publications {
+//        myLibrary(MavenPublication) {
+//            from components.java
+//        }
+//    }
+//
+//    repositories {
+//        maven {
+//            name = 'myRepo'
+//            url = "file://${buildDir}/repo"
+//        }
+//    }
+//}
